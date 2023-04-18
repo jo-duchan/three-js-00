@@ -65,7 +65,7 @@ if (WEBGL.isWebGLAvailable()) {
   // 바닥 추가
   const planeGeometry = new THREE.PlaneGeometry(20, 20, 1, 1)
   const planeMaterial = new THREE.MeshStandardMaterial({
-    color: 0xffffff,
+    color: 0xaaaaaa,
   })
   const plane = new THREE.Mesh(planeGeometry, planeMaterial)
   plane.rotation.x = -0.5 * Math.PI
