@@ -41,6 +41,8 @@ if (WEBGL.isWebGLAvailable()) {
   const geometry = new THREE.IcosahedronGeometry(0.5, 0)
   const material = new THREE.MeshStandardMaterial({
     color: 0x004fff,
+    metalness: 0.3,
+    roughness: 0.4,
   })
   const obj = new THREE.Mesh(geometry, material)
   obj.rotation.y = 0.5
@@ -52,6 +54,8 @@ if (WEBGL.isWebGLAvailable()) {
   const geometry2 = new THREE.IcosahedronGeometry(0.5, 0)
   const material2 = new THREE.MeshStandardMaterial({
     color: 0xff0000,
+    metalness: 0.5,
+    roughness: 0.4,
   })
   const obj2 = new THREE.Mesh(geometry2, material2)
   obj2.position.set(-0.5, 1.2, 0.5)
@@ -70,10 +74,10 @@ if (WEBGL.isWebGLAvailable()) {
   plane.receiveShadow = true
 
   // 빛
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.7)
   scene.add(ambientLight)
 
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5)
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7)
   directionalLight.position.set(-1.5, 2, 1)
   const dlHelper = new THREE.DirectionalLightHelper(
     directionalLight,
